@@ -54,7 +54,7 @@ let g:yankring_history_dir = '~/.backup'
 
 " rails
 " completing Rails hangs a lot
-"let g:rubycomplete_rails = 1
+let g:rubycomplete_rails = 1
 
 " command-t
 "nmap <unique> <silent> <Leader>, :CommandT<CR>
@@ -104,9 +104,6 @@ nmap <leader>f :let @/="\\<<C-R><C-W>\\>"<CR>:set hls<CR>:silent Ggrep -w "<C-R>
 
 " same in visual mode
 :vmap <leader>f y:let @/=escape(@", '\\[]$^*.')<CR>:set hls<CR>:silent Ggrep -F "<C-R>=escape(@", '\\"#')<CR>"<CR>:ccl<CR>:cw<CR><CR>
-" Ag
-" ,a for Ag
-nmap <leader>k :Ag<space>
 
 " vim-indentobject
 " add Markdown to the list of indentation based languages
