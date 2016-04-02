@@ -19,7 +19,7 @@ NeoBundle 'scrooloose/nerdcommenter'
 " fuzzy file open
 NeoBundle 'kien/ctrlp.vim'
 " popup completion menu
-NeoBundle 'AutoComplPop'
+NeoBundle 'Valloric/YouCompleteMe'
 " tags list navigation
 NeoBundle 'taglist.vim'
 " yank history
@@ -41,7 +41,7 @@ NeoBundle 'greplace.vim'
 " better looking statusline
 NeoBundle 'bling/vim-airline'
 " plugin for resolving three-way merge conflicts
-NeoBundle 'sjl/splice.vim'
+"NeoBundle 'sjl/splice.vim'
 " plugin for visually displaying indent levels
 NeoBundle 'Indent-Guides'
 " end certain structures automatically, e.g. begin/end etc.
@@ -49,13 +49,13 @@ NeoBundle 'tpope/vim-endwise'
 " automatic closing of quotes, parenthesis, brackets, etc.
 NeoBundle 'Raimondi/delimitMate'
 " calendar, duh!
-NeoBundle 'calendar.vim--Matsumoto'
+"NeoBundle 'calendar.vim--Matsumoto'
 " A Narrow Region Plugin (similar to Emacs)
 "NeoBundle 'chrisbra/NrrwRgn'
 " url based hyperlinks for text files
 NeoBundle 'utl.vim'
 " A clone of Emacs' Org-mode for Vim
-NeoBundle 'hsitz/VimOrganizer'
+"NeoBundle 'hsitz/VimOrganizer'
 " visual undo tree
 NeoBundle 'sjl/gundo.vim'
 " switch segments of text with predefined replacements. e.g. '' -> ""
@@ -75,8 +75,6 @@ NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-bundler'
 " rake integration
 NeoBundle 'tpope/vim-rake'
-" A custom text object for selecting ruby blocks (ar/ir)
-NeoBundle 'nelstrom/vim-textobj-rubyblock'
 " ruby refactoring
 NeoBundle 'ecomba/vim-ruby-refactoring'
 " apidock.com docs integration
@@ -96,37 +94,17 @@ NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 " syntax support
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tsaleh/vim-tmux'
-NeoBundle 'Puppet-Syntax-Highlighting'
 NeoBundle 'JSON.vim'
 NeoBundle 'tpope/vim-cucumber'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'tpope/vim-markdown'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'vitaly/vim-syntastic-coffee'
-NeoBundle 'vim-scripts/jade.vim'
-NeoBundle 'wavded/vim-stylus'
-NeoBundle 'slim-template/vim-slim'
-NeoBundle 'elixir-lang/vim-elixir'
-NeoBundle 'Blackrush/vim-gocode'
 NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'mtscout6/vim-cjsx'
-NeoBundle 'vitaly/vim-literate-coffeescript'
-NeoBundle 'rust-lang/rust', {'rtp': 'src/etc/vim/'}
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mxw/vim-jsx'
 
-" clojure
-"NeoBundle 'VimClojure'
-NeoBundle 'guns/vim-clojure-static'
-NeoBundle 'tpope/vim-fireplace'
-NeoBundle 'kien/rainbow_parentheses.vim'
-
-" Support and minor
-
-" Support for user-defined text objects
-NeoBundle 'kana/vim-textobj-user'
 " replacement for the repeat mapping (.) to support plugins
 NeoBundle 'tpope/vim-repeat'
 " hide .gitignore-d files from vim
@@ -137,10 +115,6 @@ NeoBundle 'scrooloose/vim-space'
 NeoBundle 'mattn/gist-vim'
 " web APIs support
 NeoBundle 'mattn/webapi-vim'
-
-"NeoBundle 'ShowMarks'
-"NeoBundle 'tpope/vim-unimpaired'
-"NeoBundle 'reinh/vim-makegreen'
 
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
