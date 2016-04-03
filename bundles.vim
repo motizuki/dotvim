@@ -40,22 +40,14 @@ NeoBundle 'austintaylor/vim-indentobject'
 NeoBundle 'greplace.vim'
 " better looking statusline
 NeoBundle 'bling/vim-airline'
-" plugin for resolving three-way merge conflicts
-"NeoBundle 'sjl/splice.vim'
 " plugin for visually displaying indent levels
 NeoBundle 'Indent-Guides'
 " end certain structures automatically, e.g. begin/end etc.
 NeoBundle 'tpope/vim-endwise'
 " automatic closing of quotes, parenthesis, brackets, etc.
 NeoBundle 'Raimondi/delimitMate'
-" calendar, duh!
-"NeoBundle 'calendar.vim--Matsumoto'
-" A Narrow Region Plugin (similar to Emacs)
-"NeoBundle 'chrisbra/NrrwRgn'
 " url based hyperlinks for text files
 NeoBundle 'utl.vim'
-" A clone of Emacs' Org-mode for Vim
-"NeoBundle 'hsitz/VimOrganizer'
 " visual undo tree
 NeoBundle 'sjl/gundo.vim'
 " switch segments of text with predefined replacements. e.g. '' -> ""
@@ -66,9 +58,29 @@ NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'airblade/vim-gitgutter'
 " hi-speed html coding
 NeoBundle 'mattn/emmet-vim'
-
+" indent
+NeoBundle 'nathanaelkane/vim-indent-guides'
+" airline
+NeoBundle 'vim-airline/vim-airline-themes'
+" Tern
+NeoBundle 'ternjs/tern_for_vim', {'build': {'mac': 'npm install'}}
+" Typescript
+NeoBundle 'HerringtonDarkholme/yats.vim'
+" Snipmate
+NeoBundle 'SirVer/ultisnips'
+NeoBundle 'honza/vim-snippets'
+NeoBundle 'ervandew/supertab'
+" JS
+NeoBundle 'othree/javascript-libraries-syntax.vim'
+NeoBundle 'othree/html5.vim'
+NeoBundle 'Shutnik/jshint2.vim'
+NeoBundle 'heavenshell/vim-jsdoc'
+" Tmux
+NeoBundle 'christoomey/vim-tmux-runner'
+NeoBundle 'christoomey/vim-tmux-navigator'
+" Mult Cursor
+NeoBundle 'terryma/vim-multiple-cursors'
 " Ruby/Rails
-
 " rails support
 NeoBundle 'tpope/vim-rails'
 " bundler integration (e.g. :Bopen)
@@ -101,9 +113,7 @@ NeoBundle 'tpope/vim-markdown'
 NeoBundle 'ekalinin/Dockerfile.vim'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'mustache/vim-mustache-handlebars'
-NeoBundle 'mtscout6/vim-cjsx'
 NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'mxw/vim-jsx'
 
 " replacement for the repeat mapping (.) to support plugins
 NeoBundle 'tpope/vim-repeat'

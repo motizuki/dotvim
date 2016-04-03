@@ -12,7 +12,6 @@ let g:syntastic_check_on_wq=0
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 
-
 " delimitMate
 let g:delimitMate_expand_space = 1 " Turns on/off the expansion of <Space>
 let g:delimitMate_expand_cr = 1    " Turns on/off the expansion of <CR>
@@ -114,6 +113,7 @@ let g:indent_guides_start_level = 2
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_guide_size = 1
 let g:indent_guides_color_change_percent = 5
+let g:indent_guides_auto_colors = 0
 
 " VimClojure
 let g:vimclojure#ParenRainbow = 1
@@ -161,3 +161,98 @@ map <Leader>r :call RunNearestSpec()<CR>
 let g:airline_powerline_fonts=1
 let g:airline_theme='light' " dark simple badwolf solarized solarized2
 set noshowmode
+
+" Tern
+let g:tern_show_signature_in_pum = 1
+let g:tern_show_argument_hints = 'on_move'
+
+" Filetypes
+autocmd BufRead,BufNewFile *.spec.js set filetype=javascript-jasmine syntax=javascript
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" You Complete Me
+let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>']
+let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>']
+
+" Super Tab
+let g:SuperTabDefaultCompletionType = '<C-n>'
+let g:SuperTabCrMapping = 0
+
+" Set Gdiff opt to vertical
+set diffopt+=vertical
+
+" ALT jk move line/block
+nnoremap ∆ :m .+1<CR>==
+nnoremap ˚ :m .-2<CR>==
+
+inoremap ∆ <Esc>:m .+1<CR>==gi
+inoremap ˚ <Esc>:m .-2<CR>==gi
+
+vnoremap ∆ :m '>+1<CR>gv=gv
+vnoremap ˚ :m '<-2<CR>gv=gv
+
+" Set nostartofline
+se nosol
+
+"Rubocop
+let g:syntastic_ruby_checkers          = ['rubocop', 'mri']
+let g:syntastic_ruby_rubocop_exec      = '`which rubocop`'
+
+"Adding control-x binding to jsdoc, jumping above the current function declaration
+nmap <silent> <C-x> ?function<cr>:noh<cr><Plug>(jsdoc)
+
+"JSDoc config
+let g:jsdoc_allow_input_prompt=1
+let g:jsdoc_input_description=1
+
+" Sane Ignore For ctrlp
+let g:ctrlp_custom_ignore = {
+  \ 'dir': '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
+  \ 'file': '\.exe$\|\.so$\|\.dat$'
+  \ }
+
+" Syntastic
+let g:syntastic_html_tidy_blocklevel_tags = ['ion-header-bar', 'ion-pane', 'ion-content', 'ion-view', 'ion-tabs', 'ion-tab', 'ion-nav-view']
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_check_on_wq = 0
+
+" Vim tmux runner
+nnoremap <leader>rr :VtrSendCommandToRunner<cr>
+noremap <leader>rl :VtrSendLinesToRunner<cr>
+nnoremap <leader>rc :VtrClearRunner<cr>
+nnoremap <leader>rf :VtrFlushCommand<cr>
+nnoremap <leader>rz :VtrFocusRunner<cr>
+nnoremap <leader>rn :VtrOpenRunner<cr>
+nnoremap <leader>rk :VtrKillRunner<cr>
+nnoremap <leader>ra :VtrAttachToPane<cr>
+
+" Format JSON
+vnoremap <leader>jf :!python -m json.tool<cr>
+
+" Tmux navigator
+let g:tmux_navigator_no_mappings = 1
+
+" Switch
+nnoremap <leader>sw :Switch<cr>
+
+" Gitgutter
+nmap ]h <Plug>GitGutterNextHunk
+nmap [h <Plug>GitGutterPrevHunk
+
+" Tmux nav works on vim
+nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <c-/> :TmuxNavigatePrevious<cr>
+
+" Javascript syntax
+let g:used_javascript_libs = 'angularjs, jquery, jasmine, angularuirouter, angularui'
