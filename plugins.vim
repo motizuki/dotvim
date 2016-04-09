@@ -163,7 +163,7 @@ let g:airline_theme='light' " dark simple badwolf solarized solarized2
 set noshowmode
 
 " Tern
-let g:tern_show_signature_in_pum = 1
+nnoremap <leader>gd :TernDef<cr>
 let g:tern_show_argument_hints = 'on_move'
 
 " Filetypes
