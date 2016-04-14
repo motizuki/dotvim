@@ -164,7 +164,7 @@ set noshowmode
 
 " Tern
 nnoremap <leader>gd :TernDef<cr>
-let g:tern_show_argument_hints = 'on_move'
+"let g:tern_show_argument_hints = 'on_move'
 
 " Filetypes
 autocmd BufRead,BufNewFile *.spec.js set filetype=javascript-jasmine syntax=javascript
