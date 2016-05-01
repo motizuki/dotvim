@@ -238,8 +238,13 @@ nnoremap <leader>ra :VtrAttachToPane<cr>
 " Format JSON
 vnoremap <leader>jf :!python -m json.tool<cr>
 
+"" ----- FORMATTING -------
 " Replace " to '
 noremap <leader>qf :%s/"\([^"]*\)"/'\1'/g<cr>
+
+" Update Ruby hash to new one
+noremap <leader>hf :%s/:\([^=,'"]*\) =>/\1:/gc<cr>
+" -------------------------------
 
 " Tmux navigator
 let g:tmux_navigator_no_mappings = 1
