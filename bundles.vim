@@ -64,8 +64,6 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'vim-airline/vim-airline-themes'
 " Tern
 NeoBundle 'ternjs/tern_for_vim', {'build': {'mac': 'npm install'}}
-" Typescript
-NeoBundle 'HerringtonDarkholme/yats.vim'
 " Snipmate
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
@@ -80,6 +78,8 @@ NeoBundle 'christoomey/vim-tmux-runner'
 NeoBundle 'christoomey/vim-tmux-navigator'
 " Mult Cursor
 NeoBundle 'terryma/vim-multiple-cursors'
+
+
 " Ruby/Rails
 " rails support
 NeoBundle 'tpope/vim-rails'
@@ -123,18 +123,21 @@ NeoBundle 'vitaly/vim-gitignore'
 NeoBundle 'scrooloose/vim-space'
 " Github's gist support
 NeoBundle 'mattn/gist-vim'
+" Typescript
+" NeoBundle 'HerringtonDarkholme/yats.vim'
 " web APIs support
-NeoBundle 'mattn/webapi-vim'
+" NeoBundle 'mattn/webapi-vim'
 
-NeoBundle 'Shougo/vimproc.vim', {
-\ 'build' : {
-\     'windows' : 'tools\\update-dll-mingw',
-\     'cygwin' : 'make -f make_cygwin.mak',
-\     'mac' : 'make -f make_mac.mak',
-\     'linux' : 'make',
-\     'unix' : 'gmake',
-\    },
-\ }
+"NeoBundle 'Shougo/vimproc.vim', {
+"\ 'build' : {
+"\     'windows' : 'tools\\update-dll-mingw',
+"\     'cygwin' : 'make -f make_cygwin.mak',
+"\     'mac' : 'make -f make_mac.mak',
+"\     'linux' : 'make',
+"\     'unix' : 'gmake',
+"\    },
+"\ }
+
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'ujihisa/unite-colorscheme'
