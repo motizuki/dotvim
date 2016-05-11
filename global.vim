@@ -18,7 +18,7 @@ if has('multi_byte')
 end
 
 " presentation settings
-set number              " precede each line with its line number
+set relativenumber      " precede each line with its line number
 set numberwidth=3       " number of culumns for line numbers
 set textwidth=0         " Do not wrap words (insert)
 set nowrap              " Do not wrap words (view)
@@ -72,9 +72,9 @@ set ignorecase          " Do case insensitive matching
 set smartcase           " do not ignore if search pattern has CAPS
 
 " omni completion settings
-set ofu=syntaxcomplete#Complete
-let g:rubycomplete_buffer_loading = 0
-let g:rubycomplete_classes_in_global = 1
+"set ofu=syntaxcomplete#Complete
+"let g:rubycomplete_buffer_loading = 0
+"let g:rubycomplete_classes_in_global = 1
 
 " directory settings
 call system('mkdir -vp ~/.backup/undo/ > /dev/null 2>&1')

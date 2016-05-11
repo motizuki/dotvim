@@ -1,10 +1,3 @@
-" showmarks
-let g:showmarks_enable = 0 " disabled by default by populardemand ;)
-hi! link ShowMarksHLl LineNr
-hi! link ShowMarksHLu LineNr
-hi! link ShowMarksHLo LineNr
-hi! link ShowMarksHLm LineNr
-
 " syntastic
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=2
@@ -12,6 +5,7 @@ let g:syntastic_check_on_wq=0
 let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 autocmd FileType javascript let b:syntastic_checkers = findfile('.jscsrc', '.;') != '' ? ['jscs'] : ['jshint']
+let g:syntastic_html_tidy_blocklevel_tags = ['ion-header-bar', 'ion-pane', 'ion-content', 'ion-view', 'ion-tabs', 'ion-tab', 'ion-nav-view']
 
 " delimitMate
 let g:delimitMate_expand_space = 1 " Turns on/off the expansion of <Space>
@@ -31,18 +25,6 @@ vmap <leader>/ :call NERDComment(0, "invert")<cr>
 " ,t to show tags window
 let Tlist_Show_Menu=1
 nmap <leader>t :TlistToggle<CR>
-
-" sessionman
-nmap <leader>S :SessionList<CR>
-nmap <leader>SS :SessionSave<CR>
-nmap <leader>SA :SessionSaveAs<CR>
-
-let g:Conque_Read_Timeout = 50 " timeout for waiting for command output.
-let g:Conque_TERM = 'xterm'
-" ,sh shell window
-nmap <Leader>sh :ConqueSplit bash<cr>
-" ,r run command
-nmap <Leader>R :ConqueSplit
 
 " yankring
 let g:yankring_replace_n_pkey = '<leader>['
@@ -95,15 +77,6 @@ let g:ctrlp_open_multiple_files = 'vjr'
 
 let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'mixed', 'line']
 
-" Fugitive
-" ,g for Ggrep
-nmap <leader>g :silent Ggrep<space>
-
-" ,f for global git serach for word under the cursor (with highlight)
-nmap <leader>f :let @/="\\<<C-R><C-W>\\>"<CR>:set hls<CR>:silent Ggrep -w "<C-R><C-W>"<CR>:ccl<CR>:cw<CR><CR>
-
-" same in visual mode
-:vmap <leader>f y:let @/=escape(@", '\\[]$^*.')<CR>:set hls<CR>:silent Ggrep -F "<C-R>=escape(@", '\\"#')<CR>"<CR>:ccl<CR>:cw<CR><CR>
 
 " vim-indentobject
 " add Markdown to the list of indentation based languages
@@ -114,7 +87,6 @@ let g:indent_guides_start_level = 2
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_guide_size = 1
 let g:indent_guides_color_change_percent = 5
-let g:indent_guides_auto_colors = 0
 
 " VimClojure
 let g:vimclojure#ParenRainbow = 1
@@ -131,7 +103,6 @@ au! BufRead,BufWrite,BufWritePost,BufNewFile *.org
 au BufEnter *.org call org#SetOrgFileType()
 
 " Gundo
-nmap <leader>u :GundoToggle<CR>
 let g:gundo_close_on_revert = 1
 
 " Switch
@@ -154,9 +125,6 @@ let g:unite_enable_start_insert = 1
 let g:unite_source_file_mru_long_limit = 100
 let g:unite_source_directory_mru_long_limit = 100
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
-
-" vim-rspec
-map <Leader>r :call RunNearestSpec()<CR>
 
 " vim-airline
 let g:airline_powerline_fonts=1
@@ -186,16 +154,6 @@ let g:SuperTabCrMapping = 0
 " Set Gdiff opt to vertical
 set diffopt+=vertical
 
-" ALT jk move line/block
-nnoremap ∆ :m .+1<CR>==
-nnoremap ˚ :m .-2<CR>==
-
-inoremap ∆ <Esc>:m .+1<CR>==gi
-inoremap ˚ <Esc>:m .-2<CR>==gi
-
-vnoremap ∆ :m '>+1<CR>gv=gv
-vnoremap ˚ :m '<-2<CR>gv=gv
-
 " Set nostartofline
 se nosol
 
@@ -216,52 +174,8 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\.exe$\|\.so$\|\.dat$'
   \ }
 
-" Syntastic
-let g:syntastic_html_tidy_blocklevel_tags = ['ion-header-bar', 'ion-pane', 'ion-content', 'ion-view', 'ion-tabs', 'ion-tab', 'ion-nav-view']
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_check_on_wq = 0
-
-" Vim tmux runner
-nnoremap <leader>rr :VtrSendCommandToRunner<cr>
-noremap <leader>rl :VtrSendLinesToRunner<cr>
-nnoremap <leader>rc :VtrClearRunner<cr>
-nnoremap <leader>rf :VtrFlushCommand<cr>
-nnoremap <leader>rz :VtrFocusRunner<cr>
-nnoremap <leader>rn :VtrOpenRunner<cr>
-nnoremap <leader>rk :VtrKillRunner<cr>
-nnoremap <leader>ra :VtrAttachToPane<cr>
-
-" Format JSON
-vnoremap <leader>jf :!python -m json.tool<cr>
-
-"" ----- FORMATTING -------
-" Replace " to '
-noremap <leader>qf :%s/"\([^"]*\)"/'\1'/g<cr>
-
-" Update Ruby hash to new one
-noremap <leader>hf :%s/:\([^=,'"]*\) =>/\1:/gc<cr>
-" -------------------------------
-
 " Tmux navigator
 let g:tmux_navigator_no_mappings = 1
-
-" Switch
-nnoremap <leader>sw :Switch<cr>
-
-" Gitgutter
-nmap ]h <Plug>GitGutterNextHunk
-nmap [h <Plug>GitGutterPrevHunk
-
-" Tmux nav works on vim
-nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
-nnoremap <silent> <c-j> :TmuxNavigateDown<cr>
-nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
-nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
-nnoremap <silent> <c-/> :TmuxNavigatePrevious<cr>
 
 " Javascript syntax
 let g:used_javascript_libs = 'angularjs, jquery, jasmine, angularuirouter, angularui'
