@@ -121,3 +121,7 @@ noremap <leader>qf :%s/"\([^"]*\)"/'\1'/g<cr>
 
 " Update Ruby hash to new one
 noremap <leader>hf :%s/:\([^=,'"]*\) =>/\1:/gc<cr>
+
+" toggle paste mode
+set pastetoggle=<F2>
+
