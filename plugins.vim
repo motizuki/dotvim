@@ -128,7 +128,7 @@ call unite#filters#matcher_default#use(['matcher_fuzzy'])
 
 " vim-airline
 let g:airline_powerline_fonts=1
-let g:airline_theme='jay' " dark simple badwolf solarized solarized2
+let g:airline_theme='dark' " dark simple badwolf solarized solarized2
 set noshowmode
 
 " Tern
