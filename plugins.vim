@@ -59,10 +59,6 @@ cal ctrlp#clra()
 
 let g:ctrlp_max_height = 40
 
-" show on top
-"let g:ctrlp_match_window_bottom = 0
-"let g:ctrlp_match_window_reversed = 0
-
 " jump to buffer in the same tab if already open
 let g:ctrlp_switch_buffer = 1
 
@@ -88,19 +84,11 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_guide_size = 1
 let g:indent_guides_color_change_percent = 5
 
-" VimClojure
-let g:vimclojure#ParenRainbow = 1
-let g:vimclojure#DynamicHighlighting = 1
-
 " Utl.vim
 if has("mac")
   let g:utl_cfg_hdl_scm_http_system = "!open '%u'"
 end
 nmap <leader>o :Utl
-
-" VimOrganizer
-au! BufRead,BufWrite,BufWritePost,BufNewFile *.org
-au BufEnter *.org call org#SetOrgFileType()
 
 " Gundo
 let g:gundo_close_on_revert = 1
@@ -115,6 +103,7 @@ autocmd FileType haml let b:switch_definitions =
       \   g:switch_builtins.true_false,
       \ ]
 
+" Blockle - swap between do/end {}
 let g:blockle_mapping = '<Leader>B'
 
 " vim-dispatch
@@ -132,7 +121,7 @@ let g:airline_theme='dark' " dark simple badwolf solarized solarized2
 set noshowmode
 
 " Tern
-nnoremap <leader>gd :TernDef<cr>
+"nnoremap <leader>gd :TernDef<cr>
 "let g:tern_show_argument_hints = 'on_move'
 
 " Filetypes

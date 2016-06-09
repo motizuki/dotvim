@@ -29,7 +29,7 @@ nmap <leader>d :diffupdate<CR>
 nmap <leader>dp :diffput<CR>
 nmap <leader>dg :diffget<CR>
 
-" driving me insane this thing
+" replicate q,w,e commands to be used in uppercase
 command Q q
 command Qa qa
 command QA qa
@@ -73,7 +73,7 @@ nnoremap <leader>rk :VtrKillRunner<cr>
 nnoremap <leader>ra :VtrAttachToPane<cr>
 
 " Switch
-nnoremap <leader>sw :Switch<cr>
+nnoremap <leader>swi :Switch<cr>
 
 " Gitgutter
 nmap ]h <Plug>GitGutterNextHunk
@@ -101,8 +101,8 @@ vnoremap ˚ :m '<-2<CR>gv=gv
 nmap <leader>u :GundoToggle<CR>
 
 " Fugitive
-" ,g for Ggrep
-nmap <leader>g :silent Ggrep<space>
+" ,ag for Ag silver searcher
+nmap <leader>ag :silent Ag<space>
 
 " ,f for global git serach for word under the cursor (with highlight)
 nmap <leader>f :let @/="\\<<C-R><C-W>\\>"<CR>:set hls<CR>:silent Ggrep -w "<C-R><C-W>"<CR>:ccl<CR>:cw<CR><CR>

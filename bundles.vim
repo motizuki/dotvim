@@ -36,8 +36,6 @@ NeoBundle 'tsaleh/vim-align'
 NeoBundle 'rking/ag.vim'
 " text object based on indent level (ai, ii)
 NeoBundle 'austintaylor/vim-indentobject'
-" global search & replace
-NeoBundle 'greplace.vim'
 " better looking statusline
 NeoBundle 'bling/vim-airline'
 " plugin for visually displaying indent levels
@@ -63,7 +61,7 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 " airline
 NeoBundle 'vim-airline/vim-airline-themes'
 " Tern
-NeoBundle 'ternjs/tern_for_vim', {'build': {'mac': 'npm install'}}
+" NeoBundle 'ternjs/tern_for_vim', {'build': {'mac': 'npm install'}}
 " Snipmate
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
