@@ -71,6 +71,14 @@ NeoBundle 'othree/javascript-libraries-syntax.vim'
 NeoBundle 'othree/html5.vim'
 NeoBundle 'Shutnik/jshint2.vim'
 NeoBundle 'heavenshell/vim-jsdoc'
+NeoBundle 'kchmck/vim-coffee-script'
+
+"html Template
+NeoBundle 'digitaltoad/vim-pug'
+
+" CSS
+NeoBundle 'wavded/vim-stylus'
+
 " Tmux
 NeoBundle 'christoomey/vim-tmux-runner'
 NeoBundle 'christoomey/vim-tmux-navigator'
