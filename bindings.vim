@@ -100,7 +100,6 @@ vnoremap ˚ :m '<-2<CR>gv=gv
 " Gundo
 nmap <leader>u :GundoToggle<CR>
 
-" Fugitive
 " ,ag for Ag silver searcher
 nmap <leader>ag :silent Ag<space>
 

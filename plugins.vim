@@ -7,10 +7,6 @@ let g:syntastic_warning_symbol='⚠'
 autocmd FileType javascript let b:syntastic_checkers = findfile('.jscsrc', '.;') != '' ? ['jscs'] : ['jshint']
 let g:syntastic_html_tidy_blocklevel_tags = ['ion-header-bar', 'ion-pane', 'ion-content', 'ion-view', 'ion-tabs', 'ion-tab', 'ion-nav-view']
 
-" delimitMate
-let g:delimitMate_expand_space = 1 " Turns on/off the expansion of <Space>
-let g:delimitMate_expand_cr = 1    " Turns on/off the expansion of <CR>
-
 " nerdtree
 " Ctrl-P to Display the file browser tree
 nmap <C-P> :NERDTreeToggle<CR>
@@ -19,6 +15,7 @@ nmap <leader>p :NERDTreeFind<CR>
 
 " nerdcommenter
 " ,/ to invert comment on the current line/selection
+let NERDSpaceDelims=1
 nmap <leader>/ :call NERDComment(0, "invert")<cr>
 vmap <leader>/ :call NERDComment(0, "invert")<cr>
 
@@ -36,12 +33,7 @@ let g:yankring_history_dir = '~/.backup'
 
 " rails
 " completing Rails hangs a lot
-let g:rubycomplete_rails = 1
-
-" command-t
-"nmap <unique> <silent> <Leader>, :CommandT<CR>
-"nmap <unique> <silent> <Leader>. :CommandTFlush<CR>:CommandT<CR>
-"let g:CommandTMatchWindowAtTop=1
+let g:rubycomplete_rails = 0
 
 let g:ctrlp_map = '<leader>,'
 let g:ctrlp_cmd = 'CtrlP'
@@ -105,9 +97,6 @@ autocmd FileType haml let b:switch_definitions =
 
 " Blockle - swap between do/end {}
 let g:blockle_mapping = '<Leader>B'
-
-" vim-dispatch
-autocmd FileType ruby let b:dispatch = 'rspec %'
 
 let g:unite_source_history_yank_enable = 1
 let g:unite_enable_start_insert = 1

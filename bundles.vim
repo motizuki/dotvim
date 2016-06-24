@@ -42,16 +42,10 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'Indent-Guides'
 " end certain structures automatically, e.g. begin/end etc.
 NeoBundle 'tpope/vim-endwise'
-" automatic closing of quotes, parenthesis, brackets, etc.
-NeoBundle 'Raimondi/delimitMate'
-" url based hyperlinks for text files
-NeoBundle 'utl.vim'
 " visual undo tree
 NeoBundle 'sjl/gundo.vim'
 " switch segments of text with predefined replacements. e.g. '' -> ""
 NeoBundle 'AndrewRadev/switch.vim'
-" async external commands with output in vim
-NeoBundle 'tpope/vim-dispatch'
 " git diff in the gutter (sign column) and stages/reverts hunks
 NeoBundle 'airblade/vim-gitgutter'
 " hi-speed html coding
@@ -62,6 +56,8 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'vim-airline/vim-airline-themes'
 " Tern
 " NeoBundle 'ternjs/tern_for_vim', {'build': {'mac': 'npm install'}}
+" Tabular
+NeoBundle 'godlygeek/tabular'
 " Snipmate
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
@@ -107,7 +103,6 @@ NeoBundle 'stefanoverna/vim-i18n'
 " color themes
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tpope/vim-vividchalk'
-NeoBundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 
 " syntax support
 NeoBundle 'vim-ruby/vim-ruby'
@@ -127,22 +122,8 @@ NeoBundle 'tpope/vim-repeat'
 NeoBundle 'vitaly/vim-gitignore'
 " repeat motion with <Space>
 NeoBundle 'scrooloose/vim-space'
-" Github's gist support
-NeoBundle 'mattn/gist-vim'
 " Typescript
 " NeoBundle 'HerringtonDarkholme/yats.vim'
-" web APIs support
-" NeoBundle 'mattn/webapi-vim'
-
-"NeoBundle 'Shougo/vimproc.vim', {
-"\ 'build' : {
-"\     'windows' : 'tools\\update-dll-mingw',
-"\     'cygwin' : 'make -f make_cygwin.mak',
-"\     'mac' : 'make -f make_mac.mak',
-"\     'linux' : 'make',
-"\     'unix' : 'gmake',
-"\    },
-"\ }
 
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
