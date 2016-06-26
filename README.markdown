@@ -18,7 +18,7 @@
 
 ### Fugitive
 
-`,g` - `:Ggrep`
+`,g` - `:Ggrep`  
 `:Gstatus` - Bring up the output of git-status in the preview window. Press - to stage or unstage the file on the cursor line. Press p to do so on a per hunk basis (--patch). Press C to invoke :Gcommit. 
  - `<leader>n` - Next file  
  - `<leader>p` - Previous file  
