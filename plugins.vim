@@ -7,11 +7,47 @@ let g:syntastic_warning_symbol='⚠'
 autocmd FileType javascript let b:syntastic_checkers = findfile('.jscsrc', '.;') != '' ? ['jscs'] : ['jshint']
 let g:syntastic_html_tidy_blocklevel_tags = ['ion-header-bar', 'ion-pane', 'ion-content', 'ion-view', 'ion-tabs', 'ion-tab', 'ion-nav-view']
 
+" Gitgutter
+nmap ]h <Plug>GitGutterNextHunk
+nmap [h <Plug>GitGutterPrevHunk
+
+" Tmux nav works on vim
+nnoremap <silent> <c-h> :TmuxNavigateLeft<cr>
+" Nasty workaround to fix garbling window when syntastic is scanning
+nnoremap <silent> <c-j> :TmuxNavigateDown<cr>:redraw!<cr>
+nnoremap <silent> <c-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <c-l> :TmuxNavigateRight<cr>
+nnoremap <silent> <c-/> :TmuxNavigatePrevious<cr>
+
+" Vim tmux runner
+nnoremap <leader>rr :VtrSendCommandToRunner<cr>
+noremap <leader>rl :VtrSendLinesToRunner<cr>
+nnoremap <leader>rc :VtrClearRunner<cr>
+nnoremap <leader>rf :VtrFlushCommand<cr>
+nnoremap <leader>rz :VtrFocusRunner<cr>
+nnoremap <leader>rn :VtrOpenRunner<cr>
+nnoremap <leader>rk :VtrKillRunner<cr>
+nnoremap <leader>ra :VtrAttachToPane<cr>
+
+" Switch
+nnoremap <leader>swi :Switch<cr>
+
 " nerdtree
 " Ctrl-P to Display the file browser tree
 nmap <C-P> :NERDTreeToggle<CR>
+
 " ,p to show current file in the tree
 nmap <leader>p :NERDTreeFind<CR>
+
+" Gundo
+nmap <leader>u :GundoToggle<CR>
+
+" ,ag for Ag silver searcher
+nmap <leader>ag :silent Ag<space>
+
+" vim-rspec
+map <Leader>r :call RunNearestSpec()<CR>
+let g:rspec_command = "VtrSendCommandToRunner rspec {spec}"
 
 " nerdcommenter
 " ,/ to invert comment on the current line/selection
@@ -30,10 +66,6 @@ let g:yankring_replace_n_nkey = '<leader>]'
 nmap <leader>y :YRShow<cr>
 " put the yankring_history file in ~/.backup
 let g:yankring_history_dir = '~/.backup'
-
-" rails
-" completing Rails hangs a lot
-let g:rubycomplete_rails = 0
 
 let g:ctrlp_map = '<leader>,'
 let g:ctrlp_cmd = 'CtrlP'
@@ -76,12 +108,6 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_guide_size = 1
 let g:indent_guides_color_change_percent = 5
 
-" Utl.vim
-if has("mac")
-  let g:utl_cfg_hdl_scm_http_system = "!open '%u'"
-end
-nmap <leader>o :Utl
-
 " Gundo
 let g:gundo_close_on_revert = 1
 
@@ -121,13 +147,14 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
-" You Complete Me
-let g:ycm_key_list_select_completion   = ['<C-j>', '<C-n>']
-let g:ycm_key_list_previous_completion = ['<C-k>', '<C-p>']
-
 " Super Tab
 let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:SuperTabCrMapping = 0
+
+" Neocomplete - popup
+let g:acp_enableAtStartup = 0
+let g:neocomplete#enable_at_startup = 1
+
 
 " Set Gdiff opt to vertical
 set diffopt+=vertical

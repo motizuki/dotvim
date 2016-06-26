@@ -18,8 +18,7 @@ NeoBundle 'jistr/vim-nerdtree-tabs'
 NeoBundle 'scrooloose/nerdcommenter'
 " fuzzy file open
 NeoBundle 'kien/ctrlp.vim'
-" popup completion menu
-NeoBundle 'Valloric/YouCompleteMe'
+
 " tags list navigation
 NeoBundle 'taglist.vim'
 " yank history
@@ -54,14 +53,18 @@ NeoBundle 'mattn/emmet-vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 " airline
 NeoBundle 'vim-airline/vim-airline-themes'
-" Tern
-" NeoBundle 'ternjs/tern_for_vim', {'build': {'mac': 'npm install'}}
 " Tabular
 NeoBundle 'godlygeek/tabular'
+
+" Completion popup and snippets
+NeoBundle 'Shougo/neocomplete.vim' " Requires lua brew install macvim --with-cscope --with-lua
+" NeoBundle 'Shougo/neosnippet'
+" NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'honza/vim-snippets'
 " Snipmate
 NeoBundle 'SirVer/ultisnips'
-NeoBundle 'honza/vim-snippets'
 NeoBundle 'ervandew/supertab'
+
 " JS
 NeoBundle 'othree/javascript-libraries-syntax.vim'
 NeoBundle 'othree/html5.vim'
@@ -69,8 +72,11 @@ NeoBundle 'Shutnik/jshint2.vim'
 NeoBundle 'heavenshell/vim-jsdoc'
 NeoBundle 'kchmck/vim-coffee-script'
 
+" Tern
+" NeoBundle 'ternjs/tern_for_vim', {'build': {'mac': 'npm install'}}
+
 "html Template
-NeoBundle 'digitaltoad/vim-pug'
+NeoBundle 'digitaltoad/vim-pug' " Jade
 
 " CSS
 NeoBundle 'wavded/vim-stylus'
@@ -96,7 +102,7 @@ NeoBundle 'apidock.vim'
 " toggle ruby blocks style
 NeoBundle 'vim-scripts/blockle.vim'
 " lightweight Rspec runner for Vim
-NeoBundle 'josemarluedke/vim-rspec'
+NeoBundle 'thoughtbot/vim-rspec'
 " i18n extraction plugin
 NeoBundle 'stefanoverna/vim-i18n'
 
