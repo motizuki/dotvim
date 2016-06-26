@@ -2,13 +2,10 @@
 
 ### NerdTree
 
-<leader>p - Toggle tree
-
-,p - Find current file on tree
+<leader>p - Toggle tree  
+,p - Find current file on tree  
 
 ### Nerdcommenter
-,/ - toggle comment
-
-,cc - add commenting
-
-,cu - Uncomment
+,/ - toggle comment  
+,cc - add commenting  
+,cu - Uncomment  
