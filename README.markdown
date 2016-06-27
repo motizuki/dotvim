@@ -67,3 +67,36 @@
 `,t,` - align on commas  
 `,t|` - align on vertical bars  
 `:AlignSEPARATORS` - align on separators  
+
+### Vim Indentobject
+vai / vii - select indent block including / excluding the outer lines  
+yai / yii - yank indent block including / excluding the outer lines  
+
+### Gundo
+`,u` - Open Gundo window
+
+### Vim i18n
+`,z` - Extract string to locale file  
+
+### Switch
+`,swi` - Switch variable on cursor  
+
+### Vim rails
+`:AV` - open "alternate" file in a new vertical split  
+`:AS` - open "alternate" file in a new horizontal split  
+`:RV` - open "related" file in a new vertical split  
+`:RS` - open "related" file in a new horizontal split  
+`:Rextract` - extract partial (select text for extraction first)  
+`:Rinvert` - takes a self.up migration and writes a self.down.  
+`gf` - remapped to take context into account. recognizes models associations, partials etc.  
+
+### Vim ruby refactoring
+`,rap` :RAddParameter - Add Parameter(s) to a method  
+`,rcpc` :RConvertPostConditional - Convert Post Conditional  
+`,rel` :RExtractLet - Extract to Let (Rspec)  
+`,rec` :RExtractConstant - Extract Constant (visual selection)  
+`,relv` :RExtractLocalVariable - Extract Local Variable (visual selection)  
+`,rit` :RInlineTemp - Inline Temp. replace temp parameter by direct function call  
+`,rrlv` :RRenameLocalVariable - Rename Local Variable (visual selection/variable under the cursor  
+`,rriv` :RRenameInstanceVariable - Rename Instance Variable (visual selection)  
+`,rem` :RExtractMethod - Extract Method (visual selection)  
