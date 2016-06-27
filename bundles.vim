@@ -53,8 +53,6 @@ NeoBundle 'mattn/emmet-vim'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 " airline
 NeoBundle 'vim-airline/vim-airline-themes'
-" Tabular
-NeoBundle 'godlygeek/tabular'
 
 " Completion popup and snippets
 NeoBundle 'Shougo/neocomplete.vim' " Requires lua brew install macvim --with-cscope --with-lua
@@ -134,6 +132,9 @@ NeoBundle 'scrooloose/vim-space'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
 NeoBundle 'ujihisa/unite-colorscheme'
+
+" Writing on vim/
+NeoBundle 'reedes/vim-pencil'
 
 if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
