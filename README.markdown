@@ -100,3 +100,40 @@ yai / yii - yank indent block including / excluding the outer lines
 `,rrlv` :RRenameLocalVariable - Rename Local Variable (visual selection/variable under the cursor  
 `,rriv` :RRenameInstanceVariable - Rename Instance Variable (visual selection)  
 `,rem` :RExtractMethod - Extract Method (visual selection)  
+
+### Blockle
+`,B` - Toggle ruby blocks style, e.g `{}` to `do .. end`  
+
+### Vim Rspec
+`,r` - Run nearest Rspec in Tmux Attached pane (Using VTR) 
+
+### Vim tmux runner
+`,rr` :VtrSendCommandToRunner - Send cache command to tmux pane  
+`,rl` :VtrSendLinesToRunner - Send selected lines to tmux pane  
+`,rc` :VtrClearRunner - Clear tmux pane  
+`,rf` :VtrFlushCommand - Flush cache command  
+`,rz` :VtrFocusRunner - Focus tmux pane  
+`,rn` :VtrOpenRunner - Open new tmux pane  
+`,rk` :VtrKillRunner - Kill current tmux pane  
+`,ra` :VtrAttachToPane - Attach in a existent tmux pane  
+
+### Misc bindings
+`]p` paste with autoindent.  
+`ga` print ascii value of character under the cursor  
+`g#` like "#", but without using "<" and ">"  
+`g<` display previous command output  
+`zt` scroll cursor line to top  
+`zz` scroll cursor line to center  
+`zb` scroll cursor line to bottom  
+`CTRL-W x` exchange current window with n-th window (or next if no count given)  
+`gv` reselect last selection  
+`gt` next tab  
+`gT` prev tab  
+`ci` change inside delimiters  
+`di` delete inside delimiters  
+`@@` execute last macro  
+`"xyy` copy line into x register (replace x with any other)  
+`<C-R>x` while in insert mote will paste content of register x (replace x with any other)  
+`"xp` paste from register x  
+`:reg` Display the contents of all numbered and named registers.  
+
