@@ -60,3 +60,10 @@
 `cst` - Change surround [any tag] [to]  
 `ds` - Delete surround [any surround]  
 `S` in `VisualMode` - Add surround [any surround]  
+
+### Vim align
+`,t=` - align on =  
+`,tsp` - align on whitespace  
+`,t,` - align on commas  
+`,t|` - align on vertical bars  
+`:AlignSEPARATORS` - align on separators  
