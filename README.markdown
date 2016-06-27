@@ -161,7 +161,7 @@ yai / yii - yank indent block including / excluding the outer lines
 [mattn/emmet-vim](github.com/mattn/emmet-vim)  
 [nathanaelkane/vim-indent-guides](github.com/nathanaelkane/vim-indent-guides)  
 [vim-airline/vim-airline-themes](github.com/vim-airline/vim-airline-themes)  
-[Shougo/neocomplete.vim](github.com/Shougo/neocomplete.vim')
+[Shougo/neocomplete.vim](github.com/Shougo/neocomplete.vim')  
 [honza/vim-snippets](github.com/honza/vim-snippets)  
 [SirVer/ultisnips](github.com/SirVer/ultisnips)  
 [ervandew/supertab](github.com/ervandew/supertab)  
