@@ -14,14 +14,14 @@
 `Ctrl-E` - switch between 2 last buffers (its just a :b#<cr> :)  
 `Ctrl-N` to cancel current search highlighing  
 `,f` global Silver Searcher for word under the cursor or for selection  
-`+, -` - easily inc/decrement integers  
+`+` / `-` - easily inc/decrement integers  
 `,W` - remove trailing spaces  
-`Ctrl-h/j/k/l` - simplified split panes navigation  
+`Ctrl-h` / `j` / `k` / `l` - simplified split panes navigation  
 `,d` - :diffupdate  
 `,dp` - :diffput  
 `,dg` - :diffget  
 `%%` - in control mode, i.e. after you typed : it will expand to the directory name of the currently opened file.  
-`Alt-j/k` - Move line/block up/down  
+`Alt-j` / `k` - Move line/block up/down  
 `F2` - Toggle paste mode :)  
 `]p` paste with autoindent.  
 `ga` print ascii value of character under the cursor  
@@ -90,8 +90,8 @@
 `:AlignSEPARATORS` - align on separators  
 
 ### Vim Indentobject
-vai / vii - select indent block including / excluding the outer lines  
-yai / yii - yank indent block including / excluding the outer lines  
+`vai` / `vii` - select indent block including / excluding the outer lines  
+`yai` / `yii` - yank indent block including / excluding the outer lines  
 
 ### Gundo
 `,u` - Open Gundo window
