@@ -11,8 +11,8 @@
 `,s` - toggle invisible characters display  
 `,n` - next quicklist result (like :Ggrep etc)  
 `,N` - previous quicklist result (like :Ggrep etc)  
-`Ctrl-E` - switch between 2 last buffers (its just a :b#<cr> :)  
-`Ctrl-N` to cancel current search highlighing  
+`Ctrl-e` - switch between 2 last buffers (its just a :b#<cr> :)  
+`Ctrl-n` to cancel current search highlighing  
 `,f` global Silver Searcher for word under the cursor or for selection  
 `+` / `-` - easily inc/decrement integers  
 `,W` - remove trailing spaces  
@@ -38,7 +38,7 @@
 `di` delete inside delimiters  
 `@@` execute last macro  
 `"xyy` copy line into x register (replace x with any other)  
-`<C-R>x` while in insert mote will paste content of register x (replace x with any other)  
+`<Ctrl-r>x` while in insert mote will paste content of register x (replace x with any other)  
 `"xp` paste from register x  
 `:reg` Display the contents of all numbered and named registers.  
 
