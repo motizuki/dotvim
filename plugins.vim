@@ -154,6 +154,19 @@ let g:SuperTabCrMapping = 0
 " Neocomplete - popup
 let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
+" Called once right before you start selecting multiple cursors
+function! Multiple_cursors_before()
+  if exists(':NeoCompleteLock')==2
+    exe 'NeoCompleteLock'
+  endif
+endfunction
+
+" Called once only when the multiple selection is canceled (default <Esc>)
+function! Multiple_cursors_after()
+  if exists(':NeoCompleteUnlock')==2
+    exe 'NeoCompleteUnlock'
+  endif
+endfunction
 
 
 " Set Gdiff opt to vertical
