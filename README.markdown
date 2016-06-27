@@ -138,4 +138,6 @@ yai / yii - yank indent block including / excluding the outer lines
 `,rk` :VtrKillRunner - Kill current tmux pane  
 `,ra` :VtrAttachToPane - Attach in a existent tmux pane  
 
-
+### Emmet vim
+`Ctrl-Y ,` in `Normal mode` - Convert emmet command into html tags  
+`Ctrl-Y ,` in `Visual mode` - Apply emmet command into selected lines  
