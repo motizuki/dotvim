@@ -24,6 +24,8 @@
 `,dp` - :diffput  
 `,dg` - :diffget  
 `%%` - in control mode, i.e. after you typed : it will expand to the directory name of the currently opened file.  
+`Alt-j/k` - Move line/block up/down  
+`F2` - Toggle paste mode :)  
 
 ### NerdTree
 
