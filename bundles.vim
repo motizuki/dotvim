@@ -34,7 +34,8 @@ NeoBundle 'tsaleh/vim-align'
 " text object based on indent level (ai, ii)
 NeoBundle 'austintaylor/vim-indentobject'
 " better looking statusline
-NeoBundle 'bling/vim-airline'
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
 " plugin for visually displaying indent levels
 NeoBundle 'Indent-Guides'
 " end certain structures automatically, e.g. begin/end etc.
@@ -49,8 +50,6 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'mattn/emmet-vim'
 " indent
 NeoBundle 'nathanaelkane/vim-indent-guides'
-" airline
-NeoBundle 'vim-airline/vim-airline-themes'
 
 " Completion popup and snippets
 NeoBundle 'Shougo/neosnippet'
