@@ -128,6 +128,8 @@ NeoBundle 'vitaly/vim-gitignore'
 NeoBundle 'scrooloose/vim-space'
 " Typescript
 " NeoBundle 'HerringtonDarkholme/yats.vim'
+" Elixir
+NeoBundle 'elixir-lang/vim-elixir'
 
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/unite-outline'
