@@ -31,8 +31,6 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tpope/vim-surround'
 " vertical alignment tool
 NeoBundle 'tsaleh/vim-align'
-" 'ag' searching integration
-NeoBundle 'rking/ag.vim'
 " text object based on indent level (ai, ii)
 NeoBundle 'austintaylor/vim-indentobject'
 " better looking statusline
@@ -55,9 +53,8 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'vim-airline/vim-airline-themes'
 
 " Completion popup and snippets
-NeoBundle 'Shougo/neocomplete.vim' " Requires lua brew install macvim --with-cscope --with-lua
-" NeoBundle 'Shougo/neosnippet'
-" NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'honza/vim-snippets'
 " Snipmate
 NeoBundle 'SirVer/ultisnips'
@@ -89,14 +86,8 @@ NeoBundle 'terryma/vim-multiple-cursors'
 " Ruby/Rails
 " rails support
 NeoBundle 'tpope/vim-rails'
-" bundler integration (e.g. :Bopen)
-NeoBundle 'tpope/vim-bundler'
-" rake integration
-NeoBundle 'tpope/vim-rake'
 " ruby refactoring
 NeoBundle 'ecomba/vim-ruby-refactoring'
-" apidock.com docs integration
-NeoBundle 'apidock.vim'
 " toggle ruby blocks style
 NeoBundle 'vim-scripts/blockle.vim'
 " lightweight Rspec runner for Vim
